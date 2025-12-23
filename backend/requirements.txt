@@ -1,0 +1,11 @@
+flask
+flask-sqlalchemy
+flask-migrate
+flask-login
+flask-bcrypt
+flask-cors
+flask-socketio
+psycopg2-binary
+python-dotenv
+eventlet
+requests
