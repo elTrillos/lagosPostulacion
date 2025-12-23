@@ -1,4 +1,5 @@
 from app import db
+from datetime import datetime
 
 class Product(db.Model):
     __tablename__ = "products"
@@ -14,6 +15,10 @@ class Product(db.Model):
     nutriscore = db.Column(db.String(1))
 
     average_price = db.Column(db.Float)
+
+    last_fetched_at = db.Column(
+        db.DateTime, default=datetime.utcnow, nullable=False
+    )
 
     def __repr__(self):
         return f"<Product {self.name}>"
